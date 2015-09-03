@@ -14,6 +14,7 @@ class puppetdb::params {
 
   $database                  = 'postgres'
   $manage_dbserver           = true
+  $postgres_datadir          = undef
 
   # The remaining database settings are not used for an embedded database
   $database_host      = 'localhost'

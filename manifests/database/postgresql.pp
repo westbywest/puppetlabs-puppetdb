@@ -7,6 +7,7 @@ class puppetdb::database::postgresql(
   $database_password    = $puppetdb::params::database_password,
   $manage_server        = $puppetdb::params::manage_dbserver,
   $manage_package_repo  = $puppetdb::params::manage_pg_repo,
+  $postgres_datadir     = $puppetdb::params::postgres_datadir,
   $postgres_version     = $puppetdb::params::postgres_version,
 ) inherits puppetdb::params {
 
@@ -14,6 +15,7 @@ class puppetdb::database::postgresql(
     if $manage_package_repo {
       class { '::postgresql::globals':
         manage_package_repo => true,
+        datadir             => $postgres_datadir,
         version             => $postgres_version,
       }
     }
