@@ -561,7 +561,7 @@ The URL to use for testing if the PuppetDB instance is running. Defaults to `/v3
 
 ####`postgres_datadir`
 
-This setting will override the default postgresql data directory, e.g. `/pgdata'.  The default is to let the postgresql module use whatever directory is the default for your OS distro.
+This setting will override the default postgresql data directory, e.g. `/pgdata`.  The default is to let the postgresql module use whatever directory is the default for your OS distro.
 
 ####`manage_package_repo`
 
